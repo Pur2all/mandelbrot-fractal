@@ -8,10 +8,10 @@ function mandelbrot(imaginaryNumber)
   {
     imgNumber=math.add(math.multiply(imgNumber, imgNumber), imaginaryNumber);
     if(imgNumber.abs()>2)
-      return "#000";
+      return "rgb(" + (255-i*contrast) + ", 0, 0)";
   }
 
-  return "#fff";
+  return "rgb(255, 255, 255)";
 }
 
 function draw(context)
@@ -42,5 +42,4 @@ function setup()
   canvas.width=1024;
   canvas.height=1024;
   draw(canvasContext);
-  console.log("gay")
 }
